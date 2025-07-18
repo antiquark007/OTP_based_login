@@ -1,0 +1,11 @@
+otp-auth-api/
+├── models/
+│   ├── User.js
+│   └── Otp.js
+├── routes/
+│   └── auth.js
+├── middleware/
+│   └── authMiddleware.js
+├── .env
+├── app.js
+├── package.json
