@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+//app.use(express.json()); if v4 or later of express
 const authRoutes = require('./routes/auth');
 const verifyToken = require('./middleware/authMiddleware');
 
@@ -20,7 +21,7 @@ app.use('/api/auth', authRoutes);
 
 // Protected test route
 app.get('/api/protected', verifyToken, (req, res) => {
-  res.json({ message: `Hello, ${req.user.mobile}` });
-});
+    res.json({ message: `Hello, ${req.user.mobile}` });
+    });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

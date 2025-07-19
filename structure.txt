@@ -1,4 +1,4 @@
-otp-auth-api/
+otp-auth/
 ├── models/
 │   ├── User.js
 │   └── Otp.js
